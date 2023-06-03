@@ -1,0 +1,16 @@
+[workspace]
+members = [
+  "plonk",
+  "rescue",
+  "primitives",
+  "utilities",
+  "utilities_derive",
+  "zprice",
+  "prover_single_gpu",
+]
+
+[profile.dev]
+opt-level = 3
+
+[profile.test]
+opt-level = 3
