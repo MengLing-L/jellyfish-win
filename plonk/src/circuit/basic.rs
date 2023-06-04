@@ -15,9 +15,9 @@ use ark_ff::{FftField, PrimeField};
 use ark_poly::{
     domain::Radix2EvaluationDomain, univariate::DensePolynomial, EvaluationDomain, UVPolynomial,
 };
+use ark_serialize::{CanonicalSerialize, CanonicalDeserialize, Write, Read};
 use ark_std::{boxed::Box, format, string::ToString, vec, vec::Vec};
 use rayon::prelude::*;
-
 /// A specific Plonk circuit instantiation.
 #[derive(Debug, Clone)]
 pub struct PlonkCircuit<F>

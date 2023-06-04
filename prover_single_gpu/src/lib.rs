@@ -227,7 +227,7 @@ impl Prover {
             })
             .collect::<Vec<_>>();
         transcript.append_commitments(b"witness_poly_comms", &wires_poly_comms)?;
-        println!("Round 1: {:.2?}", now.elapsed());
+        // println!("Round 1: {:.2?}", now.elapsed());
 
         // Round 2
         let now = Instant::now();
@@ -259,7 +259,7 @@ impl Prover {
             &permutation_poly,
         );
         transcript.append_commitment(b"perm_poly_comms", &prod_perm_poly_comm)?;
-        println!("Round 2: {:.2?}", now.elapsed());
+        // println!("Round 2: {:.2?}", now.elapsed());
 
         // Round 3
         let now = Instant::now();
@@ -391,7 +391,7 @@ impl Prover {
             })
             .collect::<Vec<_>>();
         transcript.append_commitments(b"quot_poly_comms", &split_quot_poly_comms)?;
-        println!("Round 3: {:.2?}", now.elapsed());
+        // println!("Round 3: {:.2?}", now.elapsed());
 
         // Round 4
         let now = Instant::now();
@@ -412,7 +412,7 @@ impl Prover {
             &wire_sigma_evals,
             &perm_next_eval,
         )?;
-        println!("Round 4: {:.2?}", now.elapsed());
+        // println!("Round 4: {:.2?}", now.elapsed());
 
         // Round 5
         let now = Instant::now();
@@ -527,7 +527,7 @@ impl Prover {
                 },
             )
         };
-        println!("Round 5: {:.2?}", now.elapsed());
+        // println!("Round 5: {:.2?}", now.elapsed());
 
         Ok(Proof {
             wires_poly_comms,
